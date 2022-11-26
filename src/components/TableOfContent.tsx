@@ -36,8 +36,6 @@ function TableItemGroup(props: { items: TableOfContentItem[] }) {
 }
 
 export default function TableOfContent(props: { data: TableOfContentItem[] }) {
-    console.log(props)
-
     return <div className="table-of-content">
         <p>目录</p>
         <TableItemGroup items={props.data} />

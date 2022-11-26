@@ -18,7 +18,6 @@ const BlogPostTemplate = ({ data, location, children }) => {
     const updated = post.frontmatter.updated ?? date;
     const title = data.site.siteMetadata.titleTemplate.replace("%title%", post.frontmatter.title)
 
-    console.log(post)
     return (
         <Layout>
             <div className="post-body">

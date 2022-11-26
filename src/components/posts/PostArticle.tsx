@@ -11,7 +11,6 @@ export type ArticleProp = {
 }
 
 export function PostArticle(props: ArticleProp) {
-    console.log(props)
     return (
 
         <article

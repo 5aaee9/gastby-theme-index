@@ -1,0 +1,62 @@
+{
+    "name": "indexyz-blog",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Indexyz Blog",
+    "author": "Indexnor",
+    "keywords": [
+        "gatsby"
+    ],
+    "scripts": {
+        "develop": "gatsby develop",
+        "start": "gatsby develop",
+        "build": "gatsby build",
+        "serve": "gatsby serve",
+        "clean": "gatsby clean"
+    },
+    "dependencies": {
+        "@fontsource/montserrat": "^4.5.10",
+        "@mdx-js/mdx": "v1",
+        "@mdx-js/react": "v1",
+        "dayjs": "^1.11.2",
+        "disqusjs": "^3.0.0",
+        "gatsby": "^4.15.0",
+        "gatsby-image": "^3.11.0",
+        "gatsby-omni-font-loader": "^2.0.0",
+        "gatsby-plugin-feed-mdx": "^1.1.0",
+        "gatsby-plugin-google-analytics": "^4.15.0",
+        "gatsby-plugin-manifest": "^4.15.0",
+        "gatsby-plugin-mdx": "^3.15.0",
+        "gatsby-plugin-react-helmet": "^5.15.0",
+        "gatsby-plugin-sass": "^5.15.0",
+        "gatsby-plugin-sharp": "^4.15.0",
+        "gatsby-plugin-sitemap": "^5.15.0",
+        "gatsby-remark-autolink-headers": "^5.15.0",
+        "gatsby-remark-copy-linked-files": "^5.15.0",
+        "gatsby-remark-external-links": "^0.0.4",
+        "gatsby-remark-images": "^6.15.0",
+        "gatsby-remark-lazy-load": "^1.0.2",
+        "gatsby-remark-prismjs": "^6.15.0",
+        "gatsby-remark-responsive-iframe": "^5.15.0",
+        "gatsby-remark-smartypants": "^5.15.0",
+        "gatsby-source-filesystem": "^4.15.0",
+        "gatsby-transformer-remark": "^5.15.0",
+        "gatsby-transformer-sharp": "^4.15.0",
+        "lazysizes": "^5.3.2",
+        "lodash": "^4.17.21",
+        "normalize.css": "^8.0.1",
+        "prismjs": "^1.28.0",
+        "react": "^18.1.0",
+        "react-dom": "^18.1.0",
+        "react-helmet": "^6.1.0",
+        "react-icons": "^4.3.1",
+        "sass": "^1.52.1",
+        "vh-check": "^2.0.5"
+    },
+    "devDependencies": {
+        "@types/node": "^17.0.35",
+        "@types/react": "^18.0.9",
+        "@types/react-dom": "^18.0.5",
+        "@types/react-helmet": "^6.1.5"
+    }
+}

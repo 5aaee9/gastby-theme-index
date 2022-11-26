@@ -1,0 +1,22 @@
+.creative-commons-box {
+    background-color: var(--color-primary);
+    padding: 10px 20px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+
+    a {
+        line-height: 1.5rem;
+    }
+
+    .creative-commons-mark {
+        background-image: url(./CreativeCommons.svg);
+        background-repeat: no-repeat;
+        height: 100px;
+        width: 100px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}

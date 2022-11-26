@@ -1,0 +1,13 @@
+
+.clip {
+    background-color: var(--color-primary);
+    padding: 0.4rem 0.6rem;
+    border-radius: 2rem;
+    transition: 0.1s;
+    cursor: pointer;
+
+    &:hover {
+        color: white;
+        background-color: var(--color-accent);
+    }
+}

@@ -1,0 +1,42 @@
+
+.site-header {
+    height: 48px;
+    background-color: var(--color-primary);
+    display: grid;
+
+    --color-link: #666666;
+
+    @media (max-width: 350px) {
+        height: 60px;
+        padding-top: 8px;
+        padding-bottom: 5px;
+    }
+
+    > .container {
+        margin: auto;
+        display: flex;
+
+        @media (max-width: 910px) {
+            margin: auto 30px;
+        }
+
+        @media (max-width: 350px) {
+            display: block;
+        }
+    }
+
+    .header-right {
+        margin-left: auto;
+        display: flex;
+        justify-content: left;
+        gap: 10px;
+
+        a {
+            margin: auto 0;
+        }
+
+        @media (max-width: 350px) {
+            margin-top: 5px;
+        }
+    }
+}

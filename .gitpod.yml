@@ -1,0 +1,12 @@
+vscode:
+  extensions:
+    - EditorConfig.EditorConfig
+    - bbenoist.nix
+    - zhuangtongfa.material-theme
+    - coenraads.bracket-pair-colorizer
+    - donjayamanne.githistory
+    - felipecaputo.git-project-manager
+    - eamodio.gitlens
+    - oderwat.indent-rainbow
+    - wayou.vscode-todo-highlight
+    - bungcip.better-toml

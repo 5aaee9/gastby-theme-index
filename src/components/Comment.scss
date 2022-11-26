@@ -1,0 +1,19 @@
+#dsqjs {
+    padding: 24px 0;
+    footer {
+        border-top: none;
+        background-color: transparent;
+    }
+
+    a {
+        &:hover {
+            color: white;
+        }
+    }
+
+    .dsqjs-disqus-logo {
+        &:hover {
+            background-color: unset;
+        }
+    }
+}

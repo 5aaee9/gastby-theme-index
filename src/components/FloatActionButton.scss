@@ -1,0 +1,31 @@
+.fab {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+
+    > button {
+        height: 36px;
+        width: 36px;
+        display: flex;
+
+        -webkit-appearance: none;
+        appearance: none;
+        border: 0px;
+        background: white;
+        transition: 0.1s;
+        border-radius: 4px;
+
+        cursor: pointer;
+        background-color: var(--color-primary);
+        font-size: 20px;
+
+        &:hover {
+            color: white;
+            background-color: var(--color-accent);
+        }
+
+        > svg {
+            margin: auto;
+        }
+    }
+}

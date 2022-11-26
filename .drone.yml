@@ -1,0 +1,19 @@
+kind: pipeline
+name: build
+
+trigger:
+  event:
+  - push
+  branch:
+  - master
+
+steps:
+  - name: deps
+    image: node:14-slim
+    commands:
+    - yarn install
+
+  - name: build
+    image: node:14-slim
+    commands:
+    - yarn run build

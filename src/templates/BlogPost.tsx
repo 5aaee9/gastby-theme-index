@@ -2,13 +2,13 @@ import React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
 
 import Layout from "../components/Layout";
-import PostArticle from "../components/posts/PostArticle"
+import { PostArticle } from "../components/posts/PostArticle"
 import Comment from '../components/Comment'
 import TableOfContent from '../components/TableOfContent'
 import CreativeCommons from "../components/CreativeCommons"
 import { Helmet } from "react-helmet"
 
-const BlogPostTemplate = ({ data, location }) => {
+const BlogPostTemplate = ({ data, location, children }) => {
     const post = data.mdx;
     const { previous, next } = data;
     const license = post.frontmatter.license ?? data.site.siteMetadata.defaultLicense
@@ -18,6 +18,7 @@ const BlogPostTemplate = ({ data, location }) => {
     const updated = post.frontmatter.updated ?? date;
     const title = data.site.siteMetadata.titleTemplate.replace("%title%", post.frontmatter.title)
 
+    console.log(post)
     return (
         <Layout>
             <div className="post-body">
@@ -36,7 +37,7 @@ const BlogPostTemplate = ({ data, location }) => {
                     title={post.frontmatter.title}
                     date={post.frontmatter.date}
                     tags={post.frontmatter.tags || []}
-                    html={post.body}
+                    children={children}
                 ></PostArticle>
 
                 {() => {

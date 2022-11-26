@@ -109,7 +109,7 @@ module.exports = {
             },
         },
         {
-            resolve: `gatsby-plugin-feed-mdx`,
+            resolve: `gatsby-plugin-feed`,
             options: {
                 query: `{
                     site {
@@ -125,13 +125,13 @@ module.exports = {
                     {
                         query: ` {
                             allMdx(
-                                sort: { order: DESC, fields: [frontmatter___date] },
+                                sort: { frontmatter: { date: DESC } },
                                 filter: { frontmatter: { type: { in: [null, "post"] } } }
                             ) {
                                 edges {
                                     node {
                                         excerpt
-                                        html
+                                        body
                                         fields { slug }
                                         frontmatter {
                                             title
@@ -155,7 +155,7 @@ module.exports = {
                                         guid:
                                             site.siteMetadata.siteUrl +
                                             edge.node.fields.slug,
-                                        custom_elements: [{ "content:encoded": edge.node.html }],
+                                        // custom_elements: [{ "content:encoded": edge.node.html }],
                                     }
                                 );
                             });

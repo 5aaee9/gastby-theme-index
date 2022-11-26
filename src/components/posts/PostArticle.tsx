@@ -1,17 +1,17 @@
 import React from 'react'
 import dayjs from 'dayjs'
 import TagChipList from "../utils/TagChipList"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 import MDXProvider from '../../utils/mdx'
 
 export type ArticleProp = {
     date: Date
     title: string
-    html: any
     tags: string[]
+    children: any
 }
 
-export default function PostArticle(props: ArticleProp) {
+export function PostArticle(props: ArticleProp) {
+    console.log(props)
     return (
 
         <article
@@ -32,7 +32,7 @@ export default function PostArticle(props: ArticleProp) {
                 </div>
             </header>
             <MDXProvider>
-                <MDXRenderer>{props.html}</MDXRenderer>
+                {props.children}
             </MDXProvider>
         </article>
     );

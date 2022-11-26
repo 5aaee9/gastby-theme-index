@@ -16,7 +16,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         `
             {
                 allMdx(
-                    sort: { fields: [frontmatter___date], order: ASC }
+                    sort: { frontmatter: { date: ASC } }
                     limit: 1000
                 ) {
                     nodes {
@@ -27,11 +27,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                         frontmatter {
                             type
                         }
+                        internal {
+                          contentFilePath
+                        }
                     }
                 }
 
                 tagsGroup: allMdx(limit: 2000) {
-                    group(field: frontmatter___tags) {
+                    group(field: {frontmatter: {tags: SELECT}}) {
                         fieldValue
                     }
                 }
@@ -94,7 +97,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
             createPage({
                 path: post.fields.slug,
-                component: blogPost,
+                component: `${blogPost}?__contentFilePath=${post.internal.contentFilePath}`,
                 context: {
                     id: post.id,
                     previousPostId,
@@ -109,7 +112,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
         createPage({
             path: post.fields.slug,
-            component: componentMapping[type],
+            component: `${componentMapping[type]}?__contentFilePath=${post.internal.contentFilePath}`,
             context: {
                 id: post.id,
             },

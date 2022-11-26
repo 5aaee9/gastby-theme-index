@@ -13,7 +13,7 @@ export const pageQuery = graphql`
         }
 
         allMdx(
-            sort: { fields: [frontmatter___date],  order: DESC}
+            sort: {frontmatter: {date: DESC}}
             limit: $limit
             skip: $skip
             filter: { frontmatter: { type: { in: [null, "post"] } } }

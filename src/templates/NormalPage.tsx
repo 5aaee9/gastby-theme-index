@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import PostArticle from "../components/posts/PostArticle";
+import { PostArticle } from "../components/posts/PostArticle";
 import Comment from '../components/Comment'
 import { Helmet } from "react-helmet"
 
@@ -28,7 +28,7 @@ export const pageQuery = graphql`
     }
 `;
 
-export default function FriendLinkTemplate({ data }) {
+export default function FriendLinkTemplate({ data, children }) {
     const post = data.mdx;
     const author = post.frontmatter.author ?? data.site.siteMetadata.author.name
 
@@ -51,7 +51,7 @@ export default function FriendLinkTemplate({ data }) {
                 title={post.frontmatter.title}
                 date={post.frontmatter.date}
                 tags={post.frontmatter.tags || []}
-                html={post.body}
+                children={children}
             ></PostArticle>
         <Comment />
     </Layout>;
